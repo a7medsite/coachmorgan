@@ -4,524 +4,229 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Padel Coach</title>
-</head>
-<body>
+    <title>Padel Coach Morgan</title>
 
-    <header>
-        <a href="#home" class="logo">Coach Morgan</a>
-        <nav class="navigation">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#TrainingVideos">Training Videos</a>
-            <a href="#aboutme">About Me</a>
-            <a href="#contact">Contact</a>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles that Tailwind CDN doesn't directly handle or for specific overrides */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0; /* Default background */
+        }
+
+        /* Small animation for mobile menu */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in-down {
+            animation: fadeInDown 0.3s ease-out;
+        }
+
+        /* Custom style for the background image section if you want full cover */
+        .main-section-bg {
+            background-image: url('background.jpeg'); /* Make sure this image is in the same folder as index.html */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white w-full fixed top-0 left-0 z-50 shadow-md py-4 px-6 md:px-20 flex justify-between items-center">
+        <a href="#home" class="text-blue-700 text-2xl md:text-3xl font-bold uppercase tracking-wide">Coach Morgan</a>
+
+        <button id="mobile-menu-button" class="md:hidden text-blue-700 text-3xl focus:outline-none" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="hidden md:flex space-x-8" id="desktop-nav">
+            <a href="#home" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300">Home</a>
+            <a href="#services" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300">Services</a>
+            <a href="#training-videos" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300">Training Videos</a>
+            <a href="#aboutme" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300">About Me</a>
+            <a href="#contact" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300">Contact</a>
+        </nav>
+
+        <nav id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 flex flex-col items-center space-y-4 animate-fade-in-down">
+            <a href="#home" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300 w-full text-center py-2">Home</a>
+            <a href="#services" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300 w-full text-center py-2">Services</a>
+            <a href="#training-videos" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300 w-full text-center py-2">Training Videos</a>
+            <a href="#aboutme" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300 w-full text-center py-2">About Me</a>
+            <a href="#contact" class="text-blue-700 hover:text-purple-700 text-lg font-medium transition-colors duration-300 w-full text-center py-2">Contact</a>
         </nav>
     </header>
 
-
-    <section class="main" id="home">
-        <div>
-            <h2>Hello, I'm Morgan<br><span>Padel Coach</span></h2>
-            <a href="#Training Videos" class="main-btn">Training Videos</a>
-            <div class="social-icons">
-                <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/+20"><i class="fab fa-whatsapp"></i></a>
-                <a href="#contact"><i class="fas fa-phone"></i></a>
-                <!-- <a href="#contact"><i class="fas fa-envelope"></i></a> -->
-    
+    <section id="home" class="flex items-center justify-center min-h-screen main-section-bg text-white p-8">
+        <div class="text-center">
+            <h2 class="text-2xl md:text-3xl font-medium mb-2">Hello, I'm Morgan<br /><span class="block mt-2 text-4xl md:text-6xl font-semibold text-blue-600">Padel Coach</span></h2>
+            <a href="#training-videos" class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                Training Videos
+            </a>
+            <div class="social-icons mt-10">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 text-3xl mx-3"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 text-3xl mx-3"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/+20" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 text-3xl mx-3"><i class="fab fa-whatsapp"></i></a>
+                <a href="#contact" class="text-blue-500 hover:text-blue-700 text-3xl mx-3"><i class="fas fa-phone"></i></a>
             </div>
         </div>
     </section>
 
-    <section class="cards" id="services">
-        <h2 class="title">Services</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-table-tennis"></i>
-                </div>
-                <div class="info">
-                    <h3>Training Padel</h3>
-                    <p></p>
-                </div>
+    <section id="services" class="py-20 px-4 md:px-20 bg-white">
+        <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">Services</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="bg-white shadow-lg rounded-xl p-8 m-4 w-80 text-center transition-transform duration-300 hover:scale-105">
+                <div class="text-blue-600 text-7xl mb-6"><i class="fas fa-table-tennis"></i></div>
+                <h3 class="text-xl font-bold text-blue-700 mb-2">Training Padel</h3>
+                <p class="text-gray-600">Expert coaching for all skill levels, from beginner to advanced. Focus on technique, strategy, and game analysis.</p>
             </div>
-            <!-- <div class="card">
-                <div class="icon">
-                    <i class="fas fa-video"></i>
-                </div>
-                <div class="info">
-                    <h3></h3>
-                    <p></p>
-                </div>
-            </div> -->
-        </div>
+            </div>
     </section>
 
-    
-    
-    
-    
-    
-    <section class="projects" id="TrainingVideos">
-        <h2 class="title">Training Videos & Images</h2>
-        <div class="content">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="logo.png" />
-                </div>
-                <div class="project-info">
-                    <strong class="project-title">
-                        <span>Branch 1</span>
-                       
-                    </strong>
-                </div>  
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="logo.png" />
-                </div>
-                <div class="project-info">
-                    <strong class="project-title">
-                        <span>Branch 2</span>
-                        
+    <section id="training-videos" class="py-20 px-4 md:px-20 bg-gray-900 text-white">
+        <h2 class="text-4xl font-bold text-center text-blue-400 mb-12">Training Videos & Images</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg w-80 transition-transform duration-300 hover:scale-105">
+                <div class="h-48 overflow-hidden">
+                    <img src="photo" alt="Padel Training 1" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-90" /> </div>
+                <div class="p-4">
+                    <strong class="block text-lg font-bold">
+                        <span class="text-blue-300">Drill: Volley Control</span>
                     </strong>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="logo.png" />
-                </div>
-                <div class="project-info">
-                    <strong class="project-title">
-                        <span>Branch 3</span>
-                       
+            <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg w-80 transition-transform duration-300 hover:scale-105">
+                <div class="h-48 overflow-hidden">
+                    <img src="photo" alt="Padel Training 2" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-90" /> </div>
+                <div class="p-4">
+                    <strong class="block text-lg font-bold">
+                        <span class="text-blue-300">Footwork Fundamentals</span>
                     </strong>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="logo.png" />
-                </div>
-                <div class="project-info">
-                    <strong class="project-title">
-                        <span>Branch 4</span>
-                        
+            <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg w-80 transition-transform duration-300 hover:scale-105">
+                <div class="h-48 overflow-hidden">
+                    <img src="photo" alt="Padel Training 3" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-90" /> </div>
+                <div class="p-4">
+                    <strong class="block text-lg font-bold">
+                        <span class="text-blue-300">Smash Techniques</span>
                     </strong>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="logo.png" />
-                        </div>
-                        <div class="project-info">
-                            <strong class="project-title">
-                                <span>Branch 5</span>
-                                
-                            </strong>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="logo.png" />
-                        </div>
-                        <div class="project-info">
-                            <strong class="project-title">
-                                <span>Branch 6</span>
-                                
-                            </strong>
-                        </div>
-                    </div>
-               </div>
+                </div>
+            </div>
+            <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg w-80 transition-transform duration-300 hover:scale-105">
+                <div class="h-48 overflow-hidden">
+                    <img src="photo" alt="Padel Training 4" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-90" /> </div>
+                <div class="p-4">
+                    <strong class="block text-lg font-bold">
+                        <span class="text-blue-300">Defensive Play</span>
+                    </strong>
+                </div>
+            </div>
+            <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg w-80 transition-transform duration-300 hover:scale-105">
+                <div class="h-48 overflow-hidden">
+                    <img src="photo" alt="Padel Training 5" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-90" /> </div>
+                <div class="p-4">
+                    <strong class="block text-lg font-bold">
+                        <span class="text-blue-300">Serve and Return</span>
+                    </strong>
+                </div>
+            </div>
+            <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg w-80 transition-transform duration-300 hover:scale-105">
+                <div class="h-48 overflow-hidden">
+                    <img src="photo" alt="Padel Training 6" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-90" /> </div>
+                <div class="p-4">
+                    <strong class="block text-lg font-bold">
+                        <span class="text-blue-300">Match Strategy</span>
+                    </strong>
+                </div>
             </div>
         </div>
     </section>
 
-    
+    <section id="aboutme" class="py-20 px-4 md:px-20 bg-white">
+        <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">About Me</h2>
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="text-xl text-gray-700 leading-relaxed">
+                I am a passionate and dedicated Padel coach with years of experience helping players of all levels improve their game. My goal is to provide personalized training, fostering both technical skill development and a deep love for the sport. I believe in a holistic approach, focusing not just on strokes, but also on mental game, fitness, and tactical awareness.
+            </p>
+            </div>
     </section>
-    <section class="aboutme" id="aboutme">
-        <h2 class="title">About Me</h2>
-        <div class="about-me">
-          <p>Padel coach trainer.</p>
+
+    <section id="contact" class="py-20 px-4 md:px-20 bg-gray-900 text-white">
+        <h2 class="text-4xl font-bold text-center text-blue-400 mb-12">Get in touch for any reason!</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="bg-gray-800 shadow-lg rounded-xl p-8 m-4 w-80 text-center transition-transform duration-300 hover:scale-105">
+                <div class="text-blue-500 text-6xl mb-6"><i class="fas fa-phone"></i></div>
+                <h3 class="text-xl font-bold text-blue-300 mb-2">Phone</h3>
+                <p class="text-white text-lg">+201061950798</p>
+            </div>
+
+            <div class="bg-gray-800 shadow-lg rounded-xl p-8 m-4 w-80 text-center transition-transform duration-300 hover:scale-105">
+                <div class="text-blue-500 text-6xl mb-6"><i class="fab fa-instagram"></i></div>
+                <h3 class="text-xl font-bold text-blue-300 mb-2">Instagram</h3>
+                <p class="text-white text-lg"><a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-200">instagram.com/coachMorgan</a></p>
+            </div>
+
+            <div class="bg-gray-800 shadow-lg rounded-xl p-8 m-4 w-80 text-center transition-transform duration-300 hover:scale-105">
+                <div class="text-blue-500 text-6xl mb-6"><i class="fab fa-whatsapp"></i></div>
+                <h3 class="text-xl font-bold text-blue-300 mb-2">Whatsapp</h3>
+                <p class="text-white text-lg"><a href="https://wa.me/+201061950798" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-200">+201061950798</a></p>
+            </div>
+
+            <div class="bg-gray-800 shadow-lg rounded-xl p-8 m-4 w-80 text-center transition-transform duration-300 hover:scale-105">
+                <div class="text-blue-500 text-6xl mb-6"><i class="fab fa-facebook"></i></div>
+                <h3 class="text-xl font-bold text-blue-300 mb-2">Facebook</h3>
+                <p class="text-white text-lg"><a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-200">facebook.com/coachMorgan</a></p>
+            </div>
         </div>
-      </section>
-    
-    <section class="cards contact" id="contact">
-        <h2 class="title">Get in touch for any reason!</h2>
-        <div class="content">
-            
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p>+201061950798</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <div class="info">
-                    <p><a href="https://instagram.com">Instagram</a></p>
-                </div>
-            </div>
-                
-
-            <div class="card">
-                <div class="icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="info">
-                    <p><a href="https://wa.me/+201061950798">Whatsapp</a></p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fab fa-facebook"></i>
-                </div>
-                <div class="info">
-                    <p><a href="https://facebook.com">Facebook</a></p>
-                </div>
-            </div>
     </section>
-    
-    <footer class="footer">
-        <p class="footer-title">Copyrights @ <span>Ahmed Khaled</span></p>
-        </footer>   
-    </body>
 
+    <footer class="bg-white text-gray-800 py-8 px-4 md:px-20 text-center">
+        <p class="text-lg">Copyrights  &copy; <span class="text-blue-700">Ahmed Khaled</span></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuIcon = mobileMenuButton.querySelector('i');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenuIcon.classList.remove('fa-times');
+                    mobileMenuIcon.classList.add('fa-bars');
+                } else {
+                    mobileMenuIcon.classList.remove('fa-bars');
+                    mobileMenuIcon.classList.add('fa-times');
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuIcon.classList.remove('fa-times');
+                    mobileMenuIcon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+
+</body>
 </html>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth; 
-
-    
-}
-
-
-header {
-    background-color: #f0f0f0;
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 200px ;
-}
-
-.logo{
-    text-decoration: none;
-    color: #0044ff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.8em;
-}
-
-.navigation a{
-    color: #0044ff;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 500;
-    padding-left: 30px;
-}
-
-.navigation a:hover{
-    color: #601cfc;
-}
-
-section {
-    padding: 100px 200px;
-}
-
-.main {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: url(backpadel.JPEG) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.main h2 {
-    color: #fff;
-    font-size: 1.4em;
-    font-weight: 500;
-}
-
-.main h2 span {
-    display: inline-block;
-    margin-top: 10px;
-    color: #034391;
-    font-size: 3em;
-    font-weight: 600;
-}
-
-.main h3 {
-    color: #fff;
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.main-btn {
-    color: #fff;
-    background-color: #0044ff;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 600;
-    display: inline-block;
-    padding: 0.9375em 2.1875em;
-    letter-spacing: 1px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    transition: 0.7s ease;
-}
-
-.main-btn:hover {
-    background-color: #0a49f6;
-    transform: scale(1.1);
-}
-
-.social-icons a {
-    color: #0044ff;
-    font-size: 1.7em;
-    padding-right: 30px;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    color: #0044ff;
-    font-size: 2.2em;
-    font-weight: 800;
-    margin-bottom: 30px;
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-color: #fff;
-    width: 21.25em;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    border-radius: 10px;
-    padding: 25px;
-    margin: 15px;
-    transition: 0.7s ease;
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
-
-.card .icon {
-    color: #0044ff;
-    font-size: 8em;
-    text-align: center;
-}
-
-.info {
-    text-align: center;
-}
-
-.info h3{
-    color: #0044ff;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: 10px;
-}
-
-.aboutme {
-    background-color: #fff;
-    
-}
-
-.aboutme .content{
-    margin-top: 30px;
-}
-
-.aboutme p {
-    color: #000000;
-    font-size: 1.2em;
-    font-weight: 700;
-    font-size: 30px;
-}
-
-.about-me {
-    overflow: hidden; /* This clears the float */
-  }
-  
-
-.more-details {
-    text-decoration: none;
-    color: #0044ff;
-}
-
-.more-details:hover {
-    color: #601cfc;
-}
-
-.contact {
-    background-color: #000016;
-}
-
-.contact .icon{
-    font-size: 4.5em;
-}
-
-.contact .info h3 {
-    color: #000;
-}
-
-.contact .info p {
-    font-size: 1.5em;
-}
-
-.footer {
-    background-color: #fff;
-    color: #000;
-    padding: 2em;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-title {
-    font-size: 1.3em;
-    font-weight: 600;
-}
-
-.footer-title span {
-    color: #0044ff;
-}
-
-.footer .social-icons a{
-    font-size: 1.3em;
-    padding: 0 12px 0 0;
-}
-
-.projects {
-    background-color: #000016;
-}
-
-.projects .content{
-    margin-top: 30px;
-}
-
-.project-card {
-
-    border: 1px solid #fff;
-    min-height: 14em;
-    width: 23em;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 20px;
-    transition: 0.7s ease;
-}
-
-.project-card:hover {
-   transform: scale(1.1);
-}
-
-.project-card:hover .project-image {
-    opacity: 0.9;
- }
-
-.project-image img{
-    width: 100%
-}
-
-.project-info {
-    padding: 1em;
-}
-
-.project-category {
-    font-size: 0.8em;
-    color: #000;
-}
-
-.project-title {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-top: 10px;
-}
-
-.project-title span {
-    color: #316cf4;
-}
-
-
-@media (max-width:1023px){
-    header{
-        padding: 12px 20px;
-    }
-
-    .navigation a{
-        padding-left: 10px;
-    }
-
-    .title{
-        font-size: 1.8em;
-    }
-
-    section{
-        padding: 80px 20px;
-    }
-
-    .main-content h2{
-        font-size: 1em;
-    }
-
-    .main-content h3{
-        font-size: 1.6em;
-    }
-
-    .content{
-        flex-direction: column;
-        align-items: center;
-    }
-
-}
-
-@media (max-width:641px){
-    body{
-        font-size: 12px;
-    }
-
-    .main-content h2{
-        font-size: 0.8em;
-    }
-
-    .main-content h3{
-        font-size: 1.4em;
-    }
-}
-
-@media (max-width:300px){
-    body{
-        font-size: 10px;
-     
-    }
-}
-
-</style>
